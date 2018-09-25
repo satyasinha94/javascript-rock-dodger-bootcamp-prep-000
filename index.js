@@ -111,6 +111,7 @@ function createRock(x) {
 function endGame() {
   clearInterval(gameInterval)
   alert ("YOU LOSE!");
+  return ROCKS.splice(0,ROCKS.length)
 }
 
 function moveDodger(e) {
