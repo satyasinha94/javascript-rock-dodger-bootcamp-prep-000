@@ -110,7 +110,8 @@ function createRock(x) {
  */
 function endGame() {
   clearInterval(gameInterval)
-  ROCKS = [];
+  VAR EMPTY = ROCKS
+  VAR EMPTY = []; 
   alert ("YOU LOSE!");
 }
 
