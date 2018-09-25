@@ -88,13 +88,16 @@ function createRock(x) {
      * Otherwise, if the rock hasn't reached the bottom of
      * the GAME, we want to move it again.
      */
-     else if (top > 360) {
+    if (top > 360) {
        top = `${top += 2}px`;
      }
     /**
      * But if the rock *has* reached the bottom of the GAME,
      * we should remove the rock from the DOM
      */
+     if (top > 358) {
+       $(".rock").remove();
+     }
   }
 
   // We should kick of the animation of the rock around here
