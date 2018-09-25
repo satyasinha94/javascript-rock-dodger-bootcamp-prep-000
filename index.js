@@ -83,11 +83,14 @@ function createRock(x) {
      if (checkCollision()) {
        endGame();
      }
+
     /**
      * Otherwise, if the rock hasn't reached the bottom of
      * the GAME, we want to move it again.
      */
-
+     else if (top > 360) {
+       top = `${top += 2}px`;
+     }
     /**
      * But if the rock *has* reached the bottom of the GAME,
      * we should remove the rock from the DOM
