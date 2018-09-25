@@ -113,7 +113,9 @@ function createRock(x) {
 function endGame() {
   clearInterval(gameInterval)
   alert ("YOU LOSE!");
-  return ROCKS.splice(0,ROCKS.length)
+  for (var i = 0; i < ROCKS.length; i++) {
+    ROCKS[i].remove();
+  }
 }
 
 function moveDodger(e) {
